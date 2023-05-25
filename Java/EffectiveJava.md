@@ -1,6 +1,6 @@
 # Effective Java : Third Edition   
 
-## Item 2: Consider a builer when faced with many constructor parameters
+## Item 2: Consider a builder when faced with many constructor parameters
 
 - tranditionally the programmers have used *telescoping constructor pattern*
 	- it's hard to read, hard to write, possibility to make a mistake
