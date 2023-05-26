@@ -16,3 +16,10 @@
 		- must first create its builder
 		- it could be a problem in performance-critical situations
 		- more verbose than the telescoping pattern
+
+
+## Item 5: Prefer dependency injection to hardwiring resources   
+- pass the resource into the constructor when creating a new instance 
+- dependency injection has the flexibility, reusability and testability of a class
+- using when to implement a class that depends on one or more underlying resources whose behavior affects that of the class
+	
