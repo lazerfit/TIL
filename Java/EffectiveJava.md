@@ -19,7 +19,43 @@
 
 
 ## Item 5: Prefer dependency injection to hardwiring resources   
-- pass the resource into the constructor when creating a new instance 
-- dependency injection has the flexibility, reusability and testability of a class
-- using when to implement a class that depends on one or more underlying resources whose behavior affects that of the class
+
+When creating a new instance of a class, instead of hardcoding the dependencies into the constructor,   
+pass the dependencies into the constructor. This allows the class to be more flexible, reusable, and testable.
+
+*Benefits of dependency injection*
+
+- Flexibility: Dependency injection allows the class to be configured with different dependencies at runtime. 
+This makes the class more flexible and adaptable to different environments.
+
+- Reusability: Dependency injection makes it easier to reuse classes. This is because the dependencies are injected into the class, rather than being hardcoded into the class. This makes the class more independent of its dependencies, and makes it easier to use the class in different contexts.
+
+- Testability: Dependency injection makes it easier to test classes. This is because the dependencies can be mocked or stubbed out in unit tests. This allows the class to be tested in isolation, and without the need for its dependencies.
+
+*When to use dependency injection*
+
+Dependency injection should be used when a class depends on one or more underlying resources whose behavior affects that of the class. For example, a class that depends on a database should use dependency injection to inject the database connection into the constructor. This allows the class to be configured with different databases at runtime, and makes the class more reusable and testable.
+
+Here is an example of how to use dependency injection:
+```
+public class SpellChecker {
+
+    private final Lexicon dictionary;
+
+    public SpellChecker(Lexicon dictionary) {
+        this.dictionary = dictionary;
+    }
+
+    public boolean isValid(String word) {
+        return dictionary.isValid(word);
+    }
+
+}
+```
+In this example, the `SpellChecker` class depends on a `Lexicon` object. The `Lexicon` object provides the dictionary that the `SpellChecker` class uses to check the validity of words.
+
+The `SpellChecker` class can be configured with different `Lexicon` objects at runtime by passing the `Lexicon` object into the constructor. This allows the `SpellChecker` class to be used with different dictionaries, and makes the class more reusable and testable.
+
+
+
 	
