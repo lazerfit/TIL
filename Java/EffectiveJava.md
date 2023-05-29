@@ -56,6 +56,10 @@ In this example, the `SpellChecker` class depends on a `Lexicon` object. The `Le
 
 The `SpellChecker` class can be configured with different `Lexicon` objects at runtime by passing the `Lexicon` object into the constructor. This allows the `SpellChecker` class to be used with different dictionaries, and makes the class more reusable and testable.
 
+## Item 9: Prefer try-with-resources to try-finally
+
+- the resulting code is shorter and clearer, and the exceptions that it generates ar more useful
+
 
 
 	
