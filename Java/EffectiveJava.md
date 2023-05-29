@@ -59,6 +59,16 @@ The `SpellChecker` class can be configured with different `Lexicon` objects at r
 ## Item 9: Prefer try-with-resources to try-finally
 
 - the resulting code is shorter and clearer, and the exceptions that it generates are more useful
+```
+try (MyResource resource = new MyResource()) {
+    // Use the resource here.
+} catch (Exception e) {
+    // Handle the exception here.
+}
+```
+- When i write a class that represents a resource, the class should implement `AutoCloseable` interface
+- This will ensure that the resource is closed properly, even if an exception is thrown.
+- The try-with-resources statement will automatically call the close() method on the resource, even if an exception is thrown. This helps to prevent resource leaks and makes your code more reliable.
 
 
 
