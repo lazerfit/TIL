@@ -58,7 +58,7 @@ The `SpellChecker` class can be configured with different `Lexicon` objects at r
 
 ## Item 9: Prefer try-with-resources to try-finally
 
-- the resulting code is shorter and clearer, and the exceptions that it generates ar more useful
+- the resulting code is shorter and clearer, and the exceptions that it generates are more useful
 
 
 
