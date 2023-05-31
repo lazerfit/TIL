@@ -71,5 +71,12 @@ try (MyResource resource = new MyResource()) {
 - The try-with-resources statement will automatically call the close() method on the resource, even if an exception is thrown. This helps to prevent resource leaks and makes your code more reliable.
 
 
+## Item 12: Always override toString
+
+- providing a good `toString` implementation makes your class much more pleasant to use and makes systems using the class easier to debug
+- when you decide to specify the format, you should clearly document your intentions
+- override Object's toString implementation in every instantiable class you write, unless a superclass has already done so
+
+
 
 	
