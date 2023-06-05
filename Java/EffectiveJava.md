@@ -78,5 +78,15 @@ try (MyResource resource = new MyResource()) {
 - override Object's toString implementation in every instantiable class you write, unless a superclass has already done so
 
 
+## Item 14: Minimize the accessibility of classes and members   
+
+- *information hiding* or *encapsulation* is a fundamental tenet of software design
+- information hiding is *decouples* the components
+- allowing them to be developed, tested, optimized, used, understood and modified in isolation
+- make each class or member as inaccessible as possible
+- instance fields of public classes should rarely be public
+- classes with public mutable fields are not generally thread-safe
+
+
 
 	
